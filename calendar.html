@@ -1,6 +1,10 @@
 ﻿<!DOCTYPE html>
 <html lang="ko">
 <head>
+<style type="text/css">
+.ui-datepicker-calendar > tbody td.ui-datepicker-week-end:first-child a { color: red; }
+.ui-datepicker-calendar > tbody td.ui-datepicker-week-end:last-child a { color: blue; }
+ </style>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>jQuery UI 달력</title>
 
@@ -16,21 +20,17 @@
 <script type="text/javascript">
 //<![CDATA[
 $(function(){
-	$("#date1").datepicker();
-	
+
 	$("#date2").datepicker({
-		showOn: "button",
-        buttonImage: "images/calendar.gif",
-	    buttonImageOnly: false,
-		buttonText: "Select date"
+            minDate:0,
+	showOn: "button",
+            buttonImage: "images/calendar.gif",
+	buttonImageOnly: false,
+	buttonText: "Select date",
+            dateFormat: "yy-mm-dd",
+            showOtherMonths: true
 	});
-	
-	$("#date3").datepicker({
-		onSelect:function(dateText, inst) {
-			console.log(dateText);
-			console.log(inst);
-		}
-	});
+
 });
 //]]>
 </script>

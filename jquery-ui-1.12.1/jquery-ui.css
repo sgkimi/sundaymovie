@@ -1271,6 +1271,7 @@ a.ui-button:active,
 .ui-icon-grip-diagonal-se { background-position: -80px -224px; }
 
 
+
 /* Misc visuals
 ----------------------------------*/
 
@@ -1310,3 +1311,7 @@ a.ui-button:active,
 	-webkit-box-shadow: 0px 0px 5px #666666;
 	box-shadow: 0px 0px 5px #666666;
 }
+
+
+
+
