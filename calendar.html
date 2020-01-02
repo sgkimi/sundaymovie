@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>jQuery UI 달력</title>
+
+<!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+
+<link rel="stylesheet" href="./jquery-ui-1.12.1/jquery-ui.min.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="./jquery-ui-1.12.1/jquery-ui.min.js"></script>
+
+<script src="./jquery-ui-1.12.1/datepicker-ko.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+$(function(){
+	$("#date1").datepicker();
+	
+	$("#date2").datepicker({
+		showOn: "button",
+        buttonImage: "images/calendar.gif",
+	    buttonImageOnly: false,
+		buttonText: "Select date"
+	});
+	
+	$("#date3").datepicker({
+		onSelect:function(dateText, inst) {
+			console.log(dateText);
+			console.log(inst);
+		}
+	});
+});
+//]]>
+</script>
+</head>
+<body>
+<h3>jQuer UI  달력</h3>
+
+<input type="text" value="달력보기 클릭 >>" name="date" id="date2" size="12" />
+
+</body>
+</html>
