@@ -4,6 +4,7 @@
 <style type="text/css">
 .ui-datepicker-calendar > tbody td.ui-datepicker-week-end:first-child a { color: red; }
 .ui-datepicker-calendar > tbody td.ui-datepicker-week-end:last-child a { color: blue; }
+.ui-datepicker-current { display: none; }
  </style>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>jQuery UI 달력</title>
@@ -24,11 +25,12 @@ $(function(){
 	$("#date2").datepicker({
             minDate:0,
 	showOn: "button",
+showButtonPanel: "true",
             buttonImage: "images/calendar.gif",
 	buttonImageOnly: true,
-	buttonText: "Select date",
             dateFormat: "yy-mm-dd",
-            showOtherMonths: true
+            showOtherMonths: true,
+            currentText: "test"
 	});
 
 });
@@ -36,7 +38,7 @@ $(function(){
 </script>
 </head>
 <bodyl>
-<h5>달력으로 보기</h5>
+<h5>달력 보기</h5>
 
 <input type="text" name="date" id="date2" size="12" style="display:none"  />
 
