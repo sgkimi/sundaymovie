@@ -1,0 +1,32 @@
+#butt{
+	padding-left : 40px;
+}
+
+#notes{
+	padding-left : 60px;
+}
+
+intput{
+	color : yellow;
+}
+#date{
+	border-style : solid;
+	border-width : 2px;
+	border-color : black;
+	background-color : yellow;
+}
+
+table, tr, th, td{
+	border : 1px solid black;
+	border-collapse : collapse;
+	height : 80px;
+}
+
+th{
+	text-align : center;
+	background : #00D8FF;
+}
+
+td{
+	width : 14%;
+}
