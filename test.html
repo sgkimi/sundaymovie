@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   
+</head>
+<title>API 연습</title>
+<body>
+    <h1>내사이트</h1>
+    <p></p>
+
+</script>
+    <script src="http://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+  <script>
+  $.ajax({
+    method: "GET",
+    url: "http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.xml",
+    data: { key:"efb5b74d0b2390b5a20d51060683ea37", targetDt:"20200110" },
+  
+  })
+    .done(function( msg ) {
+     $("p").append ("<strong>"+msg+"</strong>");
+console.log(msg);
+//var jb = $( 'div' ).text();
+//console.log(jb);*/
+
+    });
+</script>
+
+<script>
+/*
+var htmls = $( 'dailyBoxOfficeList' ).html();
+    for (var i = 0; i < 5; i++) {
+        var ss = htmls.get(i);
+        if (ss.contains(msg)) {
+            infoLine = ss.trim();
+            infoLine = infoLine.substring(infoLine.indexOf("alt='") + 5).trim();
+            infoLine = infoLine.substring(0, infoLine.lastIndexOf("'") ).trim();
+            System.out.println(infoLine);
+        }
+        else {
+        }
+    }
+*/
+
+
+</script>
+
+
+
+
+</body>
+</html>

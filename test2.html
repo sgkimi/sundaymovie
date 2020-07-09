@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script>
+            var today = new Date();
+var dd = today.getDate()-1;
+var mm = today.getMonth()+1; //January is 0!
+var yyyy = today.getFullYear();
+
+if(dd<10) {
+    dd='0'+dd
+} 
+
+if(mm<10) {
+    mm='0'+mm
+} 
+
+today = yyyy+mm+dd;
+document.write(today);
+        </script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $.ajax({
+                    dataType: "xml",
+                    method: "GET",
+                    url: "http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.xml",
+                    data: { key:"efb5b74d0b2390b5a20d51060683ea37", targetDt:"20200707" },
+                    success: function (xml) {
+                        // Parse the xml file and get data
+                        $(xml).find("boxOfficeResult").each(function(){
+                           
+                            $(this).find("movieNm").each(function(i){
+                                if (i != 0) { $("#movieNm").append("<br> "); }
+                                $("#movieNm").append($(this).text());
+                            });
+                            $(this).find("openDt").each(function(j){
+                                if (j != 0) { $("#openDt").append("<br> "); }
+                                $("#openDt").append($(this).text());
+                            });
+                        });
+                    }
+                });
+            });
+        </script>
+        <title>AJAX Sample with jQuery</title>
+    </head>
+ 
+    <body>
+        <!--<h2 id="dailyBoxOfficeList"></h2>-->
+        <ul id="movieNm"></ul>
+
+        <ul id="openDt"></ul>
+
+        
+    </body>
+</html>
