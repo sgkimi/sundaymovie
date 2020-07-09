@@ -17,6 +17,7 @@ if(mm<10) {
 } 
 
 today = yyyy+mm+dd;
+kk="efb5b74d0b2390b5a20d51060683ea37"
 document.write(today);
         </script>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
@@ -27,7 +28,7 @@ document.write(today);
                     dataType: "xml",
                     method: "GET",
                     url: "http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.xml",
-                    data: { key:"efb5b74d0b2390b5a20d51060683ea37", targetDt:"20200707" },
+                    data: { key:kk, targetDt:today },
                     success: function (xml) {
                         // Parse the xml file and get data
                         $(xml).find("boxOfficeResult").each(function(){
